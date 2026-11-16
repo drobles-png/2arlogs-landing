@@ -738,8 +738,17 @@ onBeforeUnmount(() => {
 
   &__quote {
     margin: 28px 0;
-    padding: 4px 0 4px 20px;
-    border-left: 4px solid $orange;
+
+    // Marca de los paneles del logo en vez de borde lateral
+    &::before {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 14px;
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, $blue 0 33%, $indigo 33% 66%, $orange 66%);
+      clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+    }
     font-size: clamp(1.15rem, 4vw, 1.35rem);
     font-weight: 600;
     line-height: 1.4;
