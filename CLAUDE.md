@@ -20,7 +20,7 @@ textos en `src/content/copy.ts`, preguntas en `src/utils/qualification.ts`.
 - Webhooks GHL (subcuenta `TvW9G67TrCg2VD5ZORoO`): contacto `…PUsDVYOWIJLzZkdpblb8`,
   cualificación `…NhFFAXICHPte9CnIB`.
 - `FUNNEL_TAG` `funnel-arlogs-ruta` · `STORAGE_PREFIX` `ar2` · dominio previsto
-  `arlogs-ruta-lng.vercel.app` (`arlogs-lng` ya es de la landing 1).
+  `arlogs-lng.vercel.app` (la landing 1 ahora es `arlogs-masterclas.vercel.app`).
 
 ## Cualificación (del cierre del VSL)
 `proforma` (tiene_proforma / producto_sin_proforma / sin_producto) · `inversion` (menos_1k / 1k_5k /
@@ -36,7 +36,7 @@ naranja) en el hero, los marcadores de la ruta y la foto; hoja de costos con pun
 "es para ti si…", cinta de lo que han traído).
 
 ## Pendientes
-- Foto real de Ángel (hoy `public/angel.webp` y la portada salen de un fotograma del VSL, con ojos cerrados).
+- Portada del video: fotograma del VSL (la foto real de Ángel va en su sección).
 - Confirmar con ARLOGS si "menos de $1,000" de inversión descalifica.
 - Datos legales: razón social, RUC, correo.
-- Workflows de GHL para estos 2 webhooks (pipeline de citas) y verificar Pixel + CAPI en producción.
+- Revisar workflows de GHL "OBTENER CONTACTO | funnel", "OBTENER CUALIFICACIÓN | funnel", "CALENDARIO | FUNNEL" con una prueba real (con permiso). CAPI sale de la landing (GHL no tiene la acción de Meta).

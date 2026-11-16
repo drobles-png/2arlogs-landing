@@ -175,7 +175,7 @@ onBeforeUnmount(() => {
       <div class="wrap about__grid">
         <figure class="about__photo reveal">
           <div class="panels panels--photo" aria-hidden="true"><i></i><i></i><i></i></div>
-          <img src="/angel.webp" :alt="PERSON_NAME" width="660" height="640" loading="lazy" decoding="async" />
+          <img src="/angel.webp" :alt="PERSON_NAME" width="800" height="958" loading="lazy" decoding="async" />
           <figcaption>{{ PERSON_NAME }} · ARLOGS</figcaption>
         </figure>
 
@@ -542,6 +542,8 @@ onBeforeUnmount(() => {
 // ── 3 · Ruta ARLOGS ───────────────────────────────────────────────────────────
 .ruta {
   padding: 80px 0;
+  background: $raised;
+  border-top: 1px solid $line;
 
   &__head {
     max-width: 640px;
@@ -672,7 +674,6 @@ onBeforeUnmount(() => {
 // ── 4 · Quién habla ───────────────────────────────────────────────────────────
 .about {
   padding: 80px 0 0;
-  background: $raised;
   border-top: 1px solid $line;
   overflow: hidden;
 
@@ -711,7 +712,7 @@ onBeforeUnmount(() => {
       display: block;
       width: 100%;
       height: auto;
-      aspect-ratio: 660 / 640;
+      aspect-ratio: 800 / 958;
       object-fit: cover;
       border-radius: $radius-lg;
     }
@@ -756,8 +757,9 @@ onBeforeUnmount(() => {
 
   &__fit {
     padding: 28px 24px;
+    border: 1px solid $line;
     border-radius: $radius-lg;
-    background: $surface;
+    background: $raised;
 
     ul {
       display: grid;
