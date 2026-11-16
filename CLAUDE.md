@@ -22,6 +22,12 @@ textos en `src/content/copy.ts`, preguntas en `src/utils/qualification.ts`.
 - `FUNNEL_TAG` `funnel-arlogs-ruta` · `STORAGE_PREFIX` `ar2` · dominio previsto
   `arlogs-lng.vercel.app` (la landing 1 ahora es `arlogs-masterclas.vercel.app`).
 
+## GHL (subcuenta `arlogs`, `TvW9G67TrCg2VD5ZORoO`)
+Pipeline **Asesoría ARLOGS** (`eYV0mTFPCNgIlXqnXzy6`, era "Funnel VSL" del snapshot; variante Comercial,
+sin etapas de pago). Workflows: `OBTENER CONTACTO | funnel`, `OBTENER CUALIFICACIÓN | funnel`,
+`CALENDARIO | FUNNEL`. Sin acción de Meta en GHL: CAPI sale de la landing (`META_CAPI_TOKEN` en Vercel).
+Prueba 16/11/2026: registro + cita OK (1 contacto, 1 oportunidad en Agendó llamada); cualificación NO corrió.
+
 ## Cualificación (del cierre del VSL)
 `proforma` (tiene_proforma / producto_sin_proforma / sin_producto) · `inversion` (menos_1k / 1k_5k /
 5k_15k / mas_15k) · `plazo` (este_mes / 1_3_meses / mas_3_meses) · `objetivo` = ¿qué quieres importar?
