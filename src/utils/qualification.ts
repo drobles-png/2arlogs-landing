@@ -21,41 +21,43 @@ export interface Question {
 
 export const QUESTIONS = [
   {
-    key: 'perfil',
-    title: '[Pregunta 1: ¿Qué te describe mejor?]',
-    noteLabel: 'Perfil',
+    key: 'proforma',
+    title: '¿Ya tienes la proforma de tu proveedor?',
+    noteLabel: 'Proforma',
     options: [
-      { value: 'perfil_a', label: '[Perfil ideal A]' },
-      { value: 'perfil_b', label: '[Perfil ideal B]' },
-      { value: 'solo_info', label: '[Solo quiero informarme por ahora]' },
-    ],
-  },
-  {
-    key: 'situacion',
-    title: '[Pregunta 2: ¿En qué punto estás hoy?]',
-    noteLabel: 'Situación',
-    options: [
-      { value: 'empezando', label: '[Estoy empezando]' },
-      { value: 'en_marcha', label: '[Ya lo hago y quiero crecer]' },
+      { value: 'tiene_proforma', label: 'Sí, ya tengo la proforma' },
+      { value: 'producto_sin_proforma', label: 'Tengo el producto identificado, pero aún no la proforma' },
+      { value: 'sin_producto', label: 'Todavía no sé qué producto traer' },
     ],
   },
   {
     key: 'inversion',
-    title: '[Pregunta 3: ¿Cómo piensas invertir?]',
+    title: '¿Cuánto piensas invertir aproximadamente en la mercadería?',
     noteLabel: 'Inversión',
     options: [
-      { value: 'tengo_capital', label: '[Tengo el capital para invertir]' },
-      { value: 'financiamiento', label: '[Con financiamiento o un socio]' },
-      { value: 'sin_presupuesto', label: '[Por ahora no tengo cómo invertir]' },
+      { value: 'menos_1k', label: 'Menos de $1,000' },
+      { value: '1k_5k', label: 'Entre $1,000 y $5,000' },
+      { value: '5k_15k', label: 'Entre $5,000 y $15,000' },
+      { value: 'mas_15k', label: 'Más de $15,000' },
+    ],
+  },
+  {
+    key: 'plazo',
+    title: '¿Para cuándo lo necesitas?',
+    noteLabel: 'Para cuándo',
+    options: [
+      { value: 'este_mes', label: 'Lo antes posible, este mes' },
+      { value: '1_3_meses', label: 'En 1 a 3 meses' },
+      { value: 'mas_3_meses', label: 'En más de 3 meses' },
     ],
   },
 ] as const satisfies readonly Question[]
 
 /** Último paso: pregunta abierta (va a GHL como `objetivo`). */
 export const OBJETIVO = {
-  title: '[Pregunta abierta: ¿Qué quieres lograr?]',
-  placeholder: '[Ejemplo de respuesta que oriente al lead]',
-  minWords: 10,
+  title: '¿Qué quieres importar?',
+  placeholder: 'Ej: 20 paneles de escalada desde China, ya tengo la proforma del proveedor',
+  minWords: 4,
 }
 
 export type QuestionKey = (typeof QUESTIONS)[number]['key']
@@ -70,12 +72,11 @@ export function labelFor(key: QuestionKey, value: string): string {
 }
 
 // ── Regla de cualificación ────────────────────────────────────────────────────
-// Por defecto se descarta solo a quien viene "a informarse" o no tiene cómo invertir.
-// El resto de respuestas no descalifica: sirven para preparar la reunión.
-// Ajustar con el cliente (quién SÍ es cliente) y documentarlo en el CLAUDE.md del proyecto.
+// VSL: "es para ti si ya tienes un producto identificado, idealmente con una proforma".
+// Solo se descarta a quien todavía no sabe qué producto traer. Inversión y plazo no descartan:
+// sirven para preparar la llamada. (Pendiente: confirmar con ARLOGS si "menos de $1,000" descarta.)
 const DISQUALIFY: Partial<Record<QuestionKey, readonly string[]>> = {
-  perfil: ['solo_info'],
-  inversion: ['sin_presupuesto'],
+  proforma: ['sin_producto'],
 }
 
 export function qualifies(a: Answers): boolean {

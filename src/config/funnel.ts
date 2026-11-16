@@ -4,10 +4,10 @@
 
 // ── Cliente ───────────────────────────────────────────────────────────────────
 export const CLIENT = {
-  name: '', // nombre comercial que se muestra: "Mi Marca"
-  person: '', // quien habla en el VSL: "Juan Pérez"
-  instagram: '', // URL completa
-  facebook: '',
+  name: 'ARLOGS', // nombre comercial que se muestra: "Mi Marca"
+  person: 'Ángel Rodríguez', // quien habla en el VSL: "Juan Pérez"
+  instagram: 'https://www.instagram.com/arlogsecuador/', // URL completa
+  facebook: 'https://www.facebook.com/Arlogsecuador/',
 }
 
 /** Nombre que se muestra en la página (wordmark, títulos, legales). */
@@ -16,31 +16,34 @@ export const BRAND_NAME = CLIENT.name || '[Marca]'
 export const PERSON_NAME = CLIENT.person || '[Nombre de quien habla]'
 
 // Dominio público (canonical, og:url). Vacío = window.location.origin
-export const SITE_URL = ''
+export const SITE_URL = 'https://arlogs-ruta-lng.vercel.app'
 
 // ── Meta ──────────────────────────────────────────────────────────────────────
 // vite.config.ts inyecta el snippet del pixel en index.html con este id (vacío = sin pixel).
 // CAPI lee el id y el token desde env vars de Vercel (META_PIXEL_ID, META_CAPI_TOKEN), nunca de aquí.
-export const META_PIXEL_ID = ''
+export const META_PIXEL_ID = '1791691808756260'
 
 // ── GoHighLevel (subcuenta DEL CLIENTE) ───────────────────────────────────────
-export const GHL_CONTACT_WEBHOOK = '' // "obtener contacto"
-export const GHL_QUALIFICATION_WEBHOOK = '' // "obtener cualificación"
-export const GHL_BOOKING_CALENDAR = '' // URL del src del iframe del código de inserción
+export const GHL_CONTACT_WEBHOOK =
+  'https://services.leadconnectorhq.com/hooks/TvW9G67TrCg2VD5ZORoO/webhook-trigger/PUsDVYOWIJLzZkdpblb8' // "obtener contacto"
+export const GHL_QUALIFICATION_WEBHOOK =
+  'https://services.leadconnectorhq.com/hooks/TvW9G67TrCg2VD5ZORoO/webhook-trigger/NhFFAXICHPte9CnIB' // "obtener cualificación"
+export const GHL_BOOKING_CALENDAR = 'https://api.leadconnectorhq.com/widget/booking/juIoDHRJl4kJXiC7oWyB' // URL del src del iframe del código de inserción
 // Id del iframe en formato del código de inserción de GHL (<calendarId>_<timestamp>);
 // form_embed.js lo usa para el alto automático. Cópialo del embed que manda el cliente.
-export const GHL_BOOKING_FRAME_ID = ''
+export const GHL_BOOKING_FRAME_ID = 'juIoDHRJl4kJXiC7oWyB_1794865476200'
 
 // ── Imágenes ──────────────────────────────────────────────────────────────────
 // Portada del video en la landing (foto de quien habla). URL de Cloudinary (f_auto,q_auto,w_1200).
 // Si el CDN falla se usa VSL_POSTER_FALLBACK (archivo en public/). Ambos vacíos = recuadro oscuro.
 export const VSL_POSTER = ''
-export const VSL_POSTER_FALLBACK = '' // ej. '/vsl-poster.webp'
+export const VSL_POSTER_FALLBACK = '/vsl-poster.webp' // ej. '/vsl-poster.webp'
 // Logo como URL absoluta (para el JSON-LD de la empresa). Vacío = el JSON-LD va sin logo.
-export const LOGO_URL = ''
+export const LOGO_URL =
+  'https://res.cloudinary.com/dpuody0df/image/upload/v1791306848/resources/6aba95e208db9775cc323d0f/vdpmvothwrh7eaxz89eg.png'
 
 // ── Video ─────────────────────────────────────────────────────────────────────
-export const WISTIA_MEDIA_ID = ''
+export const WISTIA_MEDIA_ID = 'hnck8wn24b'
 // Segundos que el CTA de /ver-video queda bloqueado (0 = sin bloqueo). En localhost son 3 s.
 export const CTA_UNLOCK_SECONDS = 120
 
@@ -70,7 +73,7 @@ export const PAYMENT_PROVIDER: 'payphone' | 'link' = 'payphone'
 // Solo con 'link': URL de la pasarela; debe redirigir al terminar a <dominio>/inscripcion-confirmada
 export const PAYMENT_URL = ''
 // WhatsApp de respaldo para cobrar si el pago no está configurado (formato 593987654321)
-export const WHATSAPP_NUMBER = ''
+export const WHATSAPP_NUMBER = '593958625891'
 
 // ── Evento en vivo (OPCIONAL) ─────────────────────────────────────────────────
 // ISO con zona: '2026-11-20T19:00:00-05:00'. Vacío = "Te avisamos la fecha por WhatsApp y correo"
@@ -81,15 +84,15 @@ export const EVENT_DURATION_MIN = 90
 export const LEGAL = {
   razonSocial: '',
   ruc: '',
-  ciudad: '',
+  ciudad: 'Guayaquil, Ecuador',
   email: '',
 }
 
 // Prefijo de las claves de localStorage/sessionStorage (2-3 letras del cliente)
-export const STORAGE_PREFIX = 'fn'
+export const STORAGE_PREFIX = 'ar2'
 
 // Nombre del funnel para tags y notas de GHL ("funnel-micliente")
-export const FUNNEL_TAG = 'funnel'
+export const FUNNEL_TAG = 'funnel-arlogs-ruta'
 
 export const IS_LOCAL = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)
 

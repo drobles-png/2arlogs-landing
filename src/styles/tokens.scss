@@ -2,35 +2,41 @@
 // SOLO variables y mixins aquí (nada que emita CSS). Lo que emite CSS va en global.scss.
 // Para un cliente nuevo: cambiar los colores de "Marca" y la familia tipográfica.
 
-// ── Marca (neutros por defecto: reemplazar con los del cliente) ───────────────
-$primary: #0057ff; // CTAs, enlaces, acentos
-$primary-hover: #0046cc;
-$on-primary: #ffffff; // texto sobre $primary (contraste 4.5:1 mínimo)
-$primary-soft: #e6eeff; // fondos de chips y opciones seleccionadas
+// ── Marca ARLOGS (paneles del logo: aéreo azul, marítimo índigo, terrestre naranja) ─
+// Landing 2 (Ruta ARLOGS): fondo claro tipo papel de proforma; la landing 1 era navy.
+$primary: #b85500; // naranja de acción (blanco encima 4.8:1)
+$primary-hover: #9e4900;
+$on-primary: #ffffff;
+$primary-soft: #fbe9d9;
+$orange: #d16304; // naranja del logo (gráficos, no texto chico)
+$orange-light: #ffb26b; // naranja legible sobre navy
+$blue: #2c55a4;
+$indigo: #2a2a8c;
 
 // ── Neutros ───────────────────────────────────────────────────────────────────
-$surface: #f6f7f9; // fondo de página
-$raised: #ffffff; // tarjetas, modales
-$surface-dark: #07090e; // secciones oscuras (hero de cierre, footer)
-$line: #dce0e7; // bordes de 1px
-$ink: #07090e; // texto principal
-$ink-muted: #576071; // texto secundario
-$ink-on-dark: #f2f4f8;
-$ink-on-dark-muted: #a3abba;
+$surface: #f4f2ed; // papel
+$raised: #ffffff;
+$surface-dark: #040a26; // navy del logo
+$line: #d9d4c8;
+$ink: #0a1033;
+$ink-muted: #4a5170;
+$ink-on-dark: #eef2ff;
+$ink-on-dark-muted: #a9b4d8;
 
 // ── Estados ───────────────────────────────────────────────────────────────────
 $success: #0f8a4b;
-$error: #d1142a;
+$error: #c8102e;
 
-// ── Tipografía (se carga en index.html desde Google Fonts) ────────────────────
-$font-sans: 'Geist', 'Inter', system-ui, sans-serif;
-$font-mono: 'Geist Mono', ui-monospace, monospace;
+// ── Tipografía (ficha técnica: Anton títulos, Montserrat textos) ──────────────
+$font-display: 'Anton', 'Impact', sans-serif;
+$font-sans: 'Montserrat', system-ui, sans-serif;
+$font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
 // ── Forma ─────────────────────────────────────────────────────────────────────
-$radius-sm: 6px;
-$radius-md: 12px;
-$radius-lg: 20px;
-$shadow-modal: 0 24px 64px rgba(7, 9, 14, 0.22);
+$radius-sm: 4px;
+$radius-md: 6px;
+$radius-lg: 10px;
+$shadow-modal: 0 24px 64px rgba(4, 10, 38, 0.24);
 $content-width: 1080px;
 
 @mixin eyebrow {
