@@ -27,7 +27,7 @@ export const META_PIXEL_ID = '1791691808756260'
 export const GHL_CONTACT_WEBHOOK =
   'https://services.leadconnectorhq.com/hooks/TvW9G67TrCg2VD5ZORoO/webhook-trigger/PUsDVYOWIJLzZkdpblb8' // "obtener contacto"
 export const GHL_QUALIFICATION_WEBHOOK =
-  'https://services.leadconnectorhq.com/hooks/TvW9G67TrCg2VD5ZORoO/webhook-trigger/NhFFAXICHPte9CnIB' // "obtener cualificación"
+  'https://services.leadconnectorhq.com/hooks/TvW9G67TrCg2VD5ZORoO/webhook-trigger/NhFFAXICHPte9CnIBBIW' // "obtener cualificación"
 export const GHL_BOOKING_CALENDAR = 'https://api.leadconnectorhq.com/widget/booking/juIoDHRJl4kJXiC7oWyB' // URL del src del iframe del código de inserción
 // Id del iframe en formato del código de inserción de GHL (<calendarId>_<timestamp>);
 // form_embed.js lo usa para el alto automático. Cópialo del embed que manda el cliente.

@@ -18,7 +18,7 @@ textos en `src/content/copy.ts`, preguntas en `src/utils/qualification.ts`.
 ## Config
 - Pixel `1791691808756260` · CAPI token solo en `.env.local` y Vercel (`META_CAPI_TOKEN`).
 - Webhooks GHL (subcuenta `TvW9G67TrCg2VD5ZORoO`): contacto `…PUsDVYOWIJLzZkdpblb8`,
-  cualificación `…NhFFAXICHPte9CnIB`.
+  cualificación `…NhFFAXICHPte9CnIBBIW`.
 - `FUNNEL_TAG` `funnel-arlogs-ruta` · `STORAGE_PREFIX` `ar2` · dominio previsto
   `arlogs-lng.vercel.app` (la landing 1 ahora es `arlogs-masterclas.vercel.app`).
 
