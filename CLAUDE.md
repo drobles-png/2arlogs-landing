@@ -26,7 +26,7 @@ textos en `src/content/copy.ts`, preguntas en `src/utils/qualification.ts`.
 Pipeline **Asesoría ARLOGS** (`eYV0mTFPCNgIlXqnXzy6`, era "Funnel VSL" del snapshot; variante Comercial,
 sin etapas de pago). Workflows: `OBTENER CONTACTO | funnel`, `OBTENER CUALIFICACIÓN | funnel`,
 `CALENDARIO | FUNNEL`. Sin acción de Meta en GHL: CAPI sale de la landing (`META_CAPI_TOKEN` en Vercel).
-Prueba 16/11/2026: registro + cita OK (1 contacto, 1 oportunidad en Agendó llamada); cualificación NO corrió.
+Prueba 16/11/2026 (MCP): 1 contacto, 6 tags, 3 notas, 1 oportunidad en Agendó llamada. OK.
 
 ## Cualificación (del cierre del VSL)
 `proforma` (tiene_proforma / producto_sin_proforma / sin_producto) · `inversion` (menos_1k / 1k_5k /
