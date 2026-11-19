@@ -21,7 +21,7 @@ export const SITE_URL = 'https://arlogs-lng.vercel.app'
 // ── Meta ──────────────────────────────────────────────────────────────────────
 // vite.config.ts inyecta el snippet del pixel en index.html con este id (vacío = sin pixel).
 // CAPI lee el id y el token desde env vars de Vercel (META_PIXEL_ID, META_CAPI_TOKEN), nunca de aquí.
-export const META_PIXEL_ID = '1791691808756260'
+export const META_PIXEL_ID = '2202471354478065'
 
 // ── GoHighLevel (subcuenta DEL CLIENTE) ───────────────────────────────────────
 export const GHL_CONTACT_WEBHOOK =

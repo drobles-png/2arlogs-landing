@@ -16,7 +16,7 @@ Stack, convenciones y envíos: ver README de la plantilla. Config en `src/config
 textos en `src/content/copy.ts`, preguntas en `src/utils/qualification.ts`.
 
 ## Config
-- Pixel `1791691808756260` · CAPI token solo en `.env.local` y Vercel (`META_CAPI_TOKEN`).
+- Pixel `2202471354478065` · CAPI token solo en `.env.local` y Vercel (`META_CAPI_TOKEN`).
 - Webhooks GHL (subcuenta `TvW9G67TrCg2VD5ZORoO`): contacto `…PUsDVYOWIJLzZkdpblb8`,
   cualificación `…NhFFAXICHPte9CnIBBIW`.
 - `FUNNEL_TAG` `funnel-arlogs-ruta` · `STORAGE_PREFIX` `ar2` · dominio previsto
