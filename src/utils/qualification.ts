@@ -73,10 +73,11 @@ export function labelFor(key: QuestionKey, value: string): string {
 
 // ── Regla de cualificación ────────────────────────────────────────────────────
 // VSL: "es para ti si ya tienes un producto identificado, idealmente con una proforma".
-// Solo se descarta a quien todavía no sabe qué producto traer. Inversión y plazo no descartan:
-// sirven para preparar la llamada. (Pendiente: confirmar con ARLOGS si "menos de $1,000" descarta.)
+// Se descarta a quien todavía no sabe qué producto traer o invierte menos de $1,000
+// (confirmado 23-nov-2026). El plazo no descarta: sirve para preparar la llamada.
 const DISQUALIFY: Partial<Record<QuestionKey, readonly string[]>> = {
   proforma: ['sin_producto'],
+  inversion: ['menos_1k'],
 }
 
 export function qualifies(a: Answers): boolean {

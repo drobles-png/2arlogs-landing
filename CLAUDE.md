@@ -31,7 +31,7 @@ Prueba final 17/11/2026 (MCP, workflows mapeados y publicados): 1 contacto, sour
 ## Cualificación (del cierre del VSL)
 `proforma` (tiene_proforma / producto_sin_proforma / sin_producto) · `inversion` (menos_1k / 1k_5k /
 5k_15k / mas_15k) · `plazo` (este_mes / 1_3_meses / mas_3_meses) · `objetivo` = ¿qué quieres importar?
-**Descalifica solo `proforma = sin_producto`** ("es para ti si ya tienes un producto identificado").
+**Descalifica `proforma = sin_producto` o `inversion = menos_1k`** ("es para ti si ya tienes un producto identificado"; el mínimo de $1,000 lo confirmó el usuario el 23-nov-2026).
 Los `value` no se renombran una vez mapeados en GHL.
 
 ## Diseño
@@ -43,6 +43,5 @@ naranja) en el hero, los marcadores de la ruta y la foto; hoja de costos con pun
 
 ## Pendientes
 - Portada del video: fotograma del VSL (la foto real de Ángel va en su sección).
-- Confirmar con ARLOGS si "menos de $1,000" de inversión descalifica.
 - Datos legales: razón social, RUC, correo.
 - Revisar workflows de GHL "OBTENER CONTACTO | funnel", "OBTENER CUALIFICACIÓN | funnel", "CALENDARIO | FUNNEL" con una prueba real (con permiso). CAPI sale de la landing (GHL no tiene la acción de Meta).
